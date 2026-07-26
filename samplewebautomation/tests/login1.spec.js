@@ -10,5 +10,8 @@ test("Launch Application and Validate", async({page})=>{
     const url = await page.url()
     console.log("URL of the Application :"+url);
     
+    // Valiation
+    await expect(page).toHaveTitle("S G Software Testing Institute")
+    await expect(page).toHaveURL("https://sgtestinginstituteapp.onrender.com/login")
     
 })
